@@ -1,6 +1,6 @@
-package com.dampc.simpleomni.presentation
+package com.dampc.simpleomni.domain
 
-import com.dampc.simpleomni.presentation.model.Content
+import com.dampc.simpleomni.domain.model.Content
 
 interface Navigator {
 

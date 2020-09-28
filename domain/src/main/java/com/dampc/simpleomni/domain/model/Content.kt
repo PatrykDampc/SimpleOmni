@@ -1,4 +1,4 @@
-package com.dampc.simpleomni.presentation.model
+package com.dampc.simpleomni.domain.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

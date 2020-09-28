@@ -5,7 +5,7 @@ import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
-import com.dampc.simpleomni.presentation.Navigator
+import com.dampc.simpleomni.domain.Navigator
 import com.dampc.simpleomni.presentation.NavigatorObserver
 import com.dampc.simpleomni.presentation.view.ARTICLE_DETAIL
 import com.dampc.simpleomni.presentation.view.DetailActivity

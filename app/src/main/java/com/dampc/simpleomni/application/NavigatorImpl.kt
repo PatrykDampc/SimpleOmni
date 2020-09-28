@@ -1,6 +1,6 @@
 package com.dampc.simpleomni.application
 
-import com.dampc.simpleomni.presentation.Navigator
+import com.dampc.simpleomni.domain.Navigator
 import com.dampc.simpleomni.presentation.NavigatorObserver
 import com.jakewharton.rxrelay2.PublishRelay
 import io.reactivex.Observable

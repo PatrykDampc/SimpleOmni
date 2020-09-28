@@ -1,6 +1,6 @@
 package com.dampc.simpleomni.repository.networking
 
-import com.dampc.simpleomni.BuildConfig.BASE_URL
+import com.dampc.simpleomni.repository.BuildConfig.BASE_URL
 import com.google.gson.GsonBuilder
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
@@ -8,9 +8,8 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-import javax.inject.Inject
 
-class ApiFactory @Inject constructor() {
+class ApiFactory {
 
     private val rxJava2CallFactory = RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io())
     private val gsonConverterFactory = GsonConverterFactory.create(GsonBuilder().create())

@@ -2,7 +2,7 @@ package com.dampc.simpleomni.application
 
 import com.dampc.simpleomni.domain.Repository
 import com.dampc.simpleomni.domain.Strings
-import com.dampc.simpleomni.presentation.Navigator
+import com.dampc.simpleomni.domain.Navigator
 import com.dampc.simpleomni.presentation.NavigatorObserver
 import com.dampc.simpleomni.repository.RepositoryImpl
 import dagger.Binds
