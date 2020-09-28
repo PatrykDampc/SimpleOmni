@@ -15,6 +15,7 @@ class Button(
 )
 
 class Alert(
+    var shouldShow: Boolean = true,
     val title: String = "",
     val message: String,
     val positiveButton: Button

@@ -7,14 +7,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.dampc.simpleomni.R
+import com.dampc.simpleomni.domain.Navigator
+import com.dampc.simpleomni.domain.Navigator.Destination.Detail
 import com.dampc.simpleomni.domain.SearchService
 import com.dampc.simpleomni.domain.Strings
 import com.dampc.simpleomni.domain.model.Article
+import com.dampc.simpleomni.domain.model.Content
 import com.dampc.simpleomni.domain.model.SearchResults
 import com.dampc.simpleomni.domain.model.Topic
-import com.dampc.simpleomni.domain.Navigator
-import com.dampc.simpleomni.domain.Navigator.Destination.Detail
-import com.dampc.simpleomni.domain.model.Content
 import com.dampc.simpleomni.presentation.model.*
 import com.dampc.simpleomni.presentation.model.MainModel.TabModel
 import com.jakewharton.rxrelay2.PublishRelay

@@ -133,21 +133,24 @@ object BindingAdapters {
     @JvmStatic
     @BindingAdapter("errorAlert")
     fun View.bindErrorDialog(alert: Alert?) {
-        (getTag(R.id.binding_dialog_error) as Dialog?)?.dismiss()
-
         alert?.let {
-            val dialog = AlertDialog.Builder(context, R.style.AppDialog)
-                .setTitle(it.title)
-                .setMessage(it.message)
-                .setCancelable(false)
-                .setPositiveButton(it.positiveButton.text) { dialog, _ ->
-                    it.positiveButton.onClick()
-                    dialog.dismiss()
-                }
-                .create()
+            if (it.shouldShow) {
+                val dialog = AlertDialog.Builder(context, R.style.AppDialog)
+                    .setTitle(it.title)
+                    .setMessage(it.message)
+                    .setCancelable(false)
+                    .setPositiveButton(it.positiveButton.text) { dialog, _ ->
+                        it.positiveButton.onClick()
+                        it.shouldShow = false
+                        dialog.dismiss()
+                    }
+                    .create()
 
-            setTag(R.id.binding_dialog_error, dialog)
-            dialog.show()
+                setTag(R.id.binding_dialog_error, dialog)
+                dialog.show()
+            } else {
+                (getTag(R.id.binding_dialog_error) as Dialog?)?.dismiss()
+            }
         }
     }
 

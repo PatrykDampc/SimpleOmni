@@ -45,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
+                android:maxLength="150"
                 android:text="@={model.input.text}"
                 app:bindEditText="@{model.input}" />
 
