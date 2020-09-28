@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.dampc.simpleomni.presentation.model.MainModel.TabModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            style="@style/EmptyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:showWhenEmpty="@{model.items}"
+            tools:text="No articles for this query" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:hideWhenEmpty="@{model.items}"
+            app:items="@{model.items}"
+            tools:listitem="@layout/cell_topic" />
+
+    </FrameLayout>
+
+</layout>

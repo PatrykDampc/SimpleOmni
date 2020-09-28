@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SimpleOmni</string>
+
+    <string name="app_title">Omni</string>
+
+    <string name="close">Close</string>
+    <string name="error_generic">Sorry, something went wrong</string>
+
+    <string name="main_activity_articles">Articles</string>
+    <string name="main_activity_topics">Topics</string>
+
+    <string name="main_activity_search_hint">Search</string>
+    <string name="main_activity_search_error_empty">Field can not be empty</string>
+
+    <string name="main_activity_initial_empty_state">Use text field above to find content you are interested in</string>
+    <string name="main_activity_empty_search_results">No results for this query</string>
+
+</resources>
