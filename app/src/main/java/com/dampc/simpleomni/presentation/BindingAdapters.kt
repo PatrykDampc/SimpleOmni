@@ -31,7 +31,6 @@ object BindingAdapters {
 
             layoutManager = LinearLayoutManager(context)
         }
-
     }
 
     @JvmStatic
@@ -66,7 +65,6 @@ object BindingAdapters {
                 }
                 false
             }
-
         }
     }
 
@@ -110,7 +108,6 @@ object BindingAdapters {
         } ?: run {
             setOnClickListener(null)
         }
-
     }
 
 

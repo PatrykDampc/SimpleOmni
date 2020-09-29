@@ -6,12 +6,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.databinding.library.baseAdapters.BR
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.dampc.simpleomni.presentation.RecyclerViewAdapter.BindingHolder
 import com.dampc.simpleomni.presentation.RecyclerViewItems.getLayoutFor
 import com.dampc.simpleomni.presentation.model.RecyclerViewItem
 import java.util.*
 
-open class RecyclerViewAdapter :
-    RecyclerView.Adapter<RecyclerViewAdapter.BindingHolder<ViewDataBinding>>() {
+open class RecyclerViewAdapter : RecyclerView.Adapter<BindingHolder<ViewDataBinding>>() {
 
     private val items = ArrayList<RecyclerViewItem>()
 
@@ -50,6 +51,5 @@ open class RecyclerViewAdapter :
         return items.size
     }
 
-    class BindingHolder<out T : ViewDataBinding>(val binding: T) :
-        RecyclerView.ViewHolder(binding.root)
+    class BindingHolder<out T : ViewDataBinding>(val binding: T) : ViewHolder(binding.root)
 }

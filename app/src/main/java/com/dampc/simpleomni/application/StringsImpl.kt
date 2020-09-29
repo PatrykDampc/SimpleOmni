@@ -11,8 +11,8 @@ class StringsImpl @Inject constructor(
     private val context: Context
 ) : Strings {
 
-    override fun get(@StringRes id: Int): String {
-        return context.resources.getText(id).toString()
+    override fun get(@StringRes key: Int): String {
+        return context.resources.getText(key).toString()
     }
 
 }

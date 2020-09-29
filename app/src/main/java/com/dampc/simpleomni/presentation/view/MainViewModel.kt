@@ -36,23 +36,11 @@ class MainViewModel @ViewModelInject constructor(
     private val events = Observable.mergeArray(
         initial.map { Event.Initial },
         refresh.map { Event.Refresh },
-        searchClick.map {
-            Event.SearchClick(
-                it
-            )
-        },
+        searchClick.map { Event.SearchClick(it) },
         search.flatMap { query ->
             searchService.search(query)
-                .map {
-                    Event.DataDownloaded(
-                        it
-                    ) as Event
-                }
-                .onErrorReturn {
-                    Event.Error(
-                        it
-                    )
-                }
+                .map { Event.DataDownloaded(it) as Event }
+                .onErrorReturn { Event.Error(it) }
                 .toObservable()
         }
     )
